@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".ProfileActivity">
+
+    <LinearLayout
+        style="@style/linear_layout"
+        android:paddingVertical="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/us_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/editImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contextClickable="true"
+                android:textColor="#00f"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/update_image"
+                style="@style/s_button"
+                android:layout_marginTop="5dp"
+                android:text="Update Image"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/user_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/update_image">
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Name: " />
+            <TextView
+                android:id="@+id/profile_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:text="Email: " />
+            <TextView
+                android:id="@+id/profile_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:text="Phone: " />
+            <TextView
+                android:id="@+id/profile_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:text="Username: " />
+
+            <TextView
+                android:id="@+id/profile_joined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:text="Joined on " />
+
+            <TextView
+                android:id="@+id/profile_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:textColor="#00f" />
+
+            <TextView
+                android:id="@+id/profile_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:textColor="#00f" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edit_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/update_image">
+
+            <EditText
+                android:id="@+id/update_name"
+                style="@style/edit_text" />
+
+            <EditText
+                android:id="@+id/update_email"
+                style="@style/edit_text"/>
+
+            <EditText
+                android:id="@+id/update_phone"
+                style="@style/edit_text"/>
+
+            <Button
+                android:id="@+id/update_details"
+                style="@style/s_button"
+                android:text="Update Details"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/changePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/cur_password"
+                style="@style/edit_text"
+                android:inputType="textPassword"
+                android:hint="Enter Current Password" />
+
+            <EditText
+                android:id="@+id/new_password"
+                style="@style/edit_text"
+                android:inputType="textPassword"
+                android:hint="Enter New Password" />
+
+            <EditText
+                android:id="@+id/confirm_new_password"
+                style="@style/edit_text"
+                android:inputType="textPassword"
+                android:hint="Re-Enter New Password" />
+
+            <Button
+                android:id="@+id/update_password"
+                style="@style/s_button"
+                android:text="Update Password"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/password_back"
+            style="@style/s_button"
+            android:visibility="gone"
+            android:text="Back"/>
+    </LinearLayout>
+</ScrollView>

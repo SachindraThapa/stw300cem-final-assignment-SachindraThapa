@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        style="@style/linear_layout"
+        android:paddingVertical="20dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="44dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/txtlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:text="Login Form"
+            android:textColor="#222"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/login_username"
+            style="@style/edit_text"
+            android:drawableLeft="@drawable/ic_avatar"
+            android:hint="Username" />
+
+        <EditText
+            android:id="@+id/login_password"
+            style="@style/edit_text"
+            android:drawableLeft="@drawable/ic_key"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <CheckBox
+            android:id="@+id/remember"
+            style="@style/cardview_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingVertical="6dp"
+            android:paddingLeft="10dp"
+            android:text="Remember me" />
+
+        <TextView
+            android:id="@+id/fingerprint"
+            style="@style/cardview_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_fingerprint"
+            android:drawablePadding="8dp"
+            android:paddingVertical="6dp"
+            android:text="Login via Fingerprint" />
+
+
+        <Button
+            android:id="@+id/login_submit"
+            style="@style/s_button"
+            android:text="Login" />
+
+        <TextView
+            android:id="@+id/login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Forgot Password"
+            android:textAllCaps="true"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/login_register"
+            style="@style/s_button"
+            android:text="Sign Up" />
+
+    </LinearLayout>
+</ScrollView>

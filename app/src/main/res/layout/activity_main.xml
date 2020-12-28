@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/linear_layout"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/main_login"
+        style="@style/s_button"
+        android:text="Login"
+        />
+
+    <Button
+        android:id="@+id/main_register"
+        style="@style/s_button"
+        android:text="Register"
+        />
+
+    <Button
+        android:id="@+id/main_products"
+        style="@style/s_button"
+        android:text="View Products"
+        />
+
+    <Button
+        android:id="@+id/main_about"
+        style="@style/s_button"
+        android:text="About us"
+        />
+</LinearLayout>

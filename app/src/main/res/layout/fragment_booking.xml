@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/linear_layout"
+    android:paddingVertical="20dp"
+    tools:context=".ui.booking.BookingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/cardview_text"
+                android:text="Date :" />
+
+            <EditText
+                android:id="@+id/bookingDate"
+                style="@style/cardview_text"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:hint="Pick a date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/cardview_text"
+                android:text="Time :" />
+
+            <Spinner
+                android:id="@+id/bookingTime"
+                style="@style/cardview_text"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:autofillHints="Pick a time" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/book_ground"
+            style="@style/s_button"
+            android:text="Book Ground" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/booked_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:padding="3dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/booked_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:textColor="#000"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="Time"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/booked_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:padding="3dp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:text="Booked By"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ground_rercycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

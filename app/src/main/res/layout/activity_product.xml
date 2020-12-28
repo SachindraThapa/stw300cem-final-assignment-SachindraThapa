@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    tools:context=".ProductActivity">
+
+    <LinearLayout
+        style="@style/linear_layout"
+        android:background="#eee"
+        android:padding="0dp">
+
+        <ImageView
+            android:id="@+id/single_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/united"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/single_name"
+                style="@style/cardview_text"
+                android:text="NAME : "
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/single_brand"
+                style="@style/cardview_text"
+                android:text="Adidas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/single_name" />
+
+            <TextView
+                android:id="@+id/single_stock"
+                style="@style/cardview_text"
+                android:text="asd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/single_name" />
+
+            <TextView
+                android:id="@+id/single_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="SOME CONTENTS ABOUT THE GIVEN PRODUCT"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/single_brand" />
+
+            <TextView
+                android:id="@+id/single_type"
+                style="@style/cardview_text"
+                android:text="JERSEY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/single_desc" />
+
+            <TextView
+                android:id="@+id/single_price"
+                style="@style/cardview_text"
+                android:text="$ 120"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/single_desc" />
+
+            <RatingBar
+                android:id="@+id/single_rating"
+                style="@style/cardview_text"
+                android:max="5"
+                android:numStars="5"
+                android:progressTint="@color/colorPrimary"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/single_type" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
+            android:orientation="vertical">
+        <EditText
+            android:id="@+id/quantity"
+            style="@style/edit_text"
+            android:padding="10dp"
+            android:inputType="number"
+            android:hint="Quantity (upto 10)"
+            />
+
+            <Button
+                android:id="@+id/btn_cart"
+                style="@style/s_button"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Add to Cart"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

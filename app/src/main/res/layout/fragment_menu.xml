@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6E0B4F"
+    >
+
+    <LinearLayout
+        style="@style/plain_linear">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/menu_image"
+            android:layout_width="200dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_default"/>
+
+        <Button
+            android:id="@+id/menu_profile"
+            style="@style/more_button"
+            android:text="Account Details"
+            />
+
+        <Button
+            android:id="@+id/menu_about"
+            style="@style/more_button"
+            android:text="About Us"
+            />
+
+        <Button
+            android:id="@+id/menu_contact"
+            style="@style/more_button"
+            android:text="Contact Us"
+            />
+
+        <Button
+            android:id="@+id/menu_partner"
+            style="@style/more_button"
+            android:text="Become a partner"
+            />
+
+        <Button
+            android:id="@+id/menu_logout"
+            style="@style/more_button"
+            android:text="Logout"
+            />
+
+        <TextView
+            style="@style/cardview_text"
+            android:layout_marginTop="10dp"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:text="Shake to Logout"/>
+
+    </LinearLayout>
+</ScrollView>

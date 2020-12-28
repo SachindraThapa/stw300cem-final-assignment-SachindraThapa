@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="#eee"
+    app:cardElevation="60dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/mycart_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/united"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mycart_name"
+            style="@style/cardview_text"
+            android:layout_marginTop="30dp"
+            android:text="PRODUCT NAME"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintStart_toEndOf="@+id/mycart_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mycart_price"
+            style="@style/cardview_text"
+            android:text="$ 120"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintStart_toEndOf="@+id/mycart_image"
+            app:layout_constraintTop_toBottomOf="@+id/mycart_name" />
+
+        <TextView
+            android:id="@+id/mycart_quantity"
+            style="@style/cardview_text"
+            android:text="120"
+            android:layout_marginRight="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mycart_name" />
+
+        <ImageView
+            android:id="@+id/cart_remove"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="5dp"
+            app:srcCompat="@drawable/ic_remove"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/delivered"
+            style="@style/cardview_text"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mycart_image"
+            app:layout_constraintTop_toBottomOf="@+id/mycart_price" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
